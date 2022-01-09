@@ -1,0 +1,759 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: rgb(10,25,47);
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: #4278f2;
+}
+.blur{
+    opacity: 0.4;
+}
+.active , ul a:hover{
+    color: rgb(100,255,218);
+    transition: all 0.3s ease;
+}
+header li {
+    cursor: pointer;
+}
+header{
+    
+    width: 100%;
+    margin: auto;
+    height: 60px;
+    background-color: rgb(10,25,47);
+    /* box-shadow: 10px 15px 25px #f8f6f2 ; */
+    z-index: 1000;
+}
+.logo{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    float: left;
+    color: #f8f6f2;
+    font-size: 25px;
+    font-weight: 700;
+}
+.nav{
+    list-style: none;
+    display: flex;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    float: right;
+    margin: 0;
+    z-index: 100001;
+}
+.nav-item a{
+    text-decoration: none;
+    color: #f8f6f2;
+}
+.container{
+    height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+}
+.container .sec1, .container .sec2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .sec1{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .sec1 a{
+    color: rgba(100,255,218 , 0.7);
+}
+.container .sec1 p {
+    margin: 20px 0;
+    color: rgb(136,146,176);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.container .imageWrapper{
+    max-width: 475px;
+    position: relative;
+    /* background-color: rgb(136,146,176); */
+    background-color: rgb(94, 187, 165);
+    border-radius: 10px;
+    /* border: 5px solid rgb(100,255,218); */
+}   
+.container .imageWrapper::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: 20px;
+    /* background-color: rgba(100,255,218,0.3); */
+    border-radius: 10px;
+    transition: all 0.5s ease-in;
+    border: 3px solid rgb(136,146,176);
+    z-index: -10000;
+}
+.container .imageWrapper::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    /* background-color: rgba(100,255,218,0.2); */
+    border-radius: 10px;
+    transition: all 0.5s ease-in;
+    /* border: 3px solid rgb(100,255,218); */
+    z-index: 10;
+}
+.container img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(60%);
+    z-index: 100;
+}
+.cu{
+    padding: 10px;
+    border-radius: 10%;
+    border: 1px solid rgba(100,255,218 , 0.5);
+}
+h1{
+    color: rgb(136,146,176);
+    font-size: 3em;
+    line-height: 1.5em;
+}
+h2{
+    font-size: 35px;
+}
+span.bracket{
+    color: rgb(100,255,218);
+}
+.container span.name{
+    color: rgb(204,214,246);
+}
+
+
+
+
+.about{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: nowrap;
+}
+.about .sec1{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .sec1 div{
+    width: 100%;
+    height: 50%;
+    background-color: rgba(100,255,218,0.3);
+    color: #f8f6f2;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+    left: 200px;
+    transition: all 0.1s ease-in;
+}
+.about .sec2{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.about .sec2 .content{
+    width: 80%;
+    height: 80%;
+    background-color: rgb(17,34,64);
+    z-index: 1;
+    padding: 10px 10px 10px 200px;
+    font-size: 16px;
+    color: rgb(136,146,176);
+    transition: all 0.1s ease-in;
+}
+.timeline {
+    position: relative; 
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: rgb(10,25,47);
+    top: 0;
+    bottom: 0;
+    left: 3%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .tl-container {
+    padding: 10px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+  }
+  
+  /* The circles on the timeline */
+  .tl-container::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -17px;
+    background-color: rgb(10,25,47);
+    border: 4px solid rgb(100,255,218);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the right */
+  .tl-right {
+    left: 3%;
+  }
+
+  /* Fix the circle for containers on the right side */
+  .tl-right::after {
+    left: -12px;
+  }
+  
+  /* The actual content */
+  .tl-content {
+    padding:10px;
+    background-color: rgb(17,34,64);
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .workex{
+      font-size: 14px;
+  }
+
+
+
+
+/* Skills box */
+
+.skill {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: nowrap;
+}
+
+.skill .sec1{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill .sec1 .content{
+    width: 80%;
+    height: 80%;
+    background-color: rgba(17,34,64 , 0.6);
+    z-index: 2;
+    padding: 30px 200px 30px 30px;
+    font-size: 16px;
+    color: rgb(136,146,176);
+    position: relative;
+    left: 90px;
+    transition: all 0.1s ease-in;
+}
+.skill .content .skillSets{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.skill .content .skillSets div{
+    width: 170px;
+    /* margin-right: 40px; */
+    margin: 10px 0 ;
+}
+.skill .sec2{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill .sec2 div{
+    width: 100%;
+    height: 50%;
+    background-color: rgba(100,255,218,0.3);
+    color: #f8f6f2;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    right: 110px;
+    transition: all 0.1s ease-in;
+}
+
+/* Projects section*/
+
+.projects{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.projects h2{
+    color: rgb(204,214,246);
+}
+
+.projects .projectItem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 20px 0;
+}
+
+.projects .projectItem .content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.projects .projectItem .smallLeft{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects .projectItem .smallLeft div{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(100,255,218,0.3);
+    color: #f8f6f2;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+    left: 200px;
+    transition: all 0.1s ease-in;
+}
+
+.projects .projectItem .bigRight{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects .projectItem .bigRight .content{
+    width: 80%;
+    height: 400px;
+    background-color: rgb(17,34,64);
+    z-index: 1;
+    padding: 10px 10px 10px 200px;
+    font-size: 16px;
+    color: rgb(136,146,176);
+    transition: all 0.1s ease-in;
+}
+
+.projects .projectItem .smallRight {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects .projectItem .smallRight div{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(100,255,218,0.3);
+    color: #f8f6f2;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    right: 110px;
+    transition: all 0.1s ease-in;
+}
+.projects .projectItem .bigLeft {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects .projectItem .bigLeft .content{
+    width: 80%;
+    height: 400px;
+    background-color: rgba(17,34,64 , 0.6);
+    z-index: 2;
+    padding: 30px 200px 30px 30px;
+    font-size: 16px;
+    color: rgb(136,146,176);
+    position: relative;
+    left: 90px;
+    transition: all 0.1s ease-in;
+}
+.projects .projectItem .content p span{
+    color:rgba(100,255,218,0.7);
+}
+.projects .projectItem .content .margin-left{
+    margin: 10px 20px;
+}
+.projects .projectItem .content .margin-left p {
+    margin: 10px 0;
+}
+.projects .projectItem .content a{
+    display: block;
+    padding: 10px;
+    width: 100px;
+    border-radius: 10%;
+    border: 2px solid rgba(100,255,218 , 0.5);
+    color: rgba(100,255,218 ,1);
+    text-align: center;
+}
+
+/* contact section start */
+
+.contactsec{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contactsec .contact{
+    max-width: 800px;
+    text-align: center;
+}
+.contactsec .contact .cont-container h2 , p{
+    margin: 0;
+    padding: 0;
+}
+.contactsec .cont-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.cont-container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.cont-container .contactInfo .cn-box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.cont-container .contactInfo .cn-box h3{
+    color: rgb(136,146,176);
+}
+.contactsec p{
+    color: rgb(204,214,246);
+}
+.cont-container .contactInfo .cn-box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: rgba(100,255,218 , 0.7);
+    color: rgb(17,34,64);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.cont-container .contactInfo .cn-box .cn-text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contactsec .cnform{
+    width: 40%;
+    padding: 40px;
+    background: rgb(17,34,64);
+}
+.contactsec .cnform h3{
+    font-size: 30px;
+    color: rgba(100,255,218,0.7);
+    font-weight: 500;
+}
+.contactsec .cnform .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top:10px;
+}
+.contactsec .cnform .inputBox input ,
+.contactsec .cnform .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid rgba(100,255,218 , 0.7);
+    outline: none;
+    resize: none;
+    color: rgb(204,214,246);
+    background-color: rgb(17,34,64);
+}
+.contactsec h2{
+    color: rgb(136,146,176);
+}
+.contactsec .cnform .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #999;
+}
+.contactsec .cnform .inputBox input:focus ~ span,
+.contactsec .cnform .inputBox input:valid ~ span,
+.contactsec .cnform .inputBox textarea:focus ~ span,
+.contactsec .cnform .inputBox textarea:valid ~ span
+{
+    color: rgba(100,255,218,0.7);
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactsec .cnform .inputBox input[type='submit']{
+    width: 100px;
+    /* background: rgb(17,34,64); */
+    background: rgba(100,255,218,0.7);
+    /* color: #fff; */
+    color: rgb(17,34,64);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    /* border: 2px solid rgba(100,255,218,0.7); */
+    border-radius: 5px;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(204,214,246);
+    background-color: rgb(10,25,47);
+}
+
+
+
+@media screen and (max-width:1000px){
+    .container{
+        flex-direction: column-reverse;
+        height: max-content;
+        margin-top: 0px;
+    }
+    .container .imageWrapper{
+        max-width: 310px;
+        position: relative;
+        right: 10px;
+    }
+    .container .sec1{
+        margin-top: 50px;
+    }
+    .container .sec2 , .container .sec1{
+        width: 100%;
+    }
+    .about{
+        flex-direction: column;
+        height: max-content;
+        margin-top: 100px;
+    }
+    .about .sec2 , .about .sec1{
+        width: 100%;
+    }
+    .about .sec1 div{
+        height: 200px;
+        width: 70%;
+        left: 0;
+    }
+    .about .sec2 .content{
+        width: 90%;
+        padding: 15px;
+    }
+    .skill{
+        flex-direction: column-reverse;
+        height: max-content;
+        margin-top: 100px;
+    }
+    .skill .sec2 , .skill .sec2{
+        width: 100%;
+    }
+    .skill .sec2 div{
+        right: 0;
+        width: 70%;
+        height: 200px;
+    }
+    .skill .sec1 .content{
+        left: 0;
+        width: 90%;
+        padding: 20px;
+    }
+    /* .logo{
+        width: 100%;
+        justify-content: start;
+        padding-left:20px ;
+       
+    } */
+
+    .projects .left{
+        flex-direction: column;    
+    }
+    .projects .right{
+        flex-direction: column-reverse;
+    }
+    .projects .projectItem .smallLeft , .projects .projectItem .smallRight , .projects .projectItem .bigRight , .projects .projectItem .bigLeft{
+        width: 100%;
+    }
+    .projects .projectItem .smallLeft div{
+        left:0;
+        width: 70%;
+    }
+    .projects .projectItem .smallRight div{
+        right: 0;
+        width: 70%;
+    }
+    .projects .projectItem .bigRight .content{
+        right: 0;
+        width: 90%;
+        padding: 20px;
+        height: max-content;
+    }
+    .projects .projectItem .bigLeft .content{
+        left: 0;
+        width: 90%;
+        padding: 20px;
+        height: max-content;
+    }
+
+ 
+    h1{
+        font-size: 2.5em;
+    }
+    header .menu-btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        transition: all 0.5s ease-in;
+        cursor: pointer;
+    }
+    header .menu-btn .menu-bur{
+        width: 40px;
+        height: 3px;
+        background-color: #f8f6f2;
+        border-radius: 5px;
+        transition: all 0.5s ease-in;
+    }
+    header .menu-btn .menu-bur::before , header .menu-btn .menu-bur::after{
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background-color: #f8f6f2;
+        border-radius: 5px;
+        transition: all 0.5s ease-in;
+    }
+    header .menu-btn .menu-bur::before{
+        transform: translateY(-12px);
+    }
+    header .menu-btn .menu-bur::after{
+        transform:translateY(12px);
+    }
+    header .menu-btn.open .menu-bur{
+        
+        background: transparent;
+
+    }
+    header .menu-btn.open .menu-bur::before{
+        transform: rotate(-45deg) ;
+    }
+    header .menu-btn.open .menu-bur::after{
+        transform: rotate(45deg) ;
+    }
+    
+    .nav{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgba(100,255,218 , 0.5);
+        width: 100%;
+        padding: 0;
+        clip-path: circle(10px at 100% -20%);
+        transition: all 1s ease;
+    }    
+    .nav-item a{
+        color: #f8f6f2;
+    }
+    .menu-btn.open ~ .nav{
+        clip-path: circle(1210px at 100% 0%);
+        height: calc(100vh - 60px);
+    }
+    .skill .sec1 , .skill  .sec2{ 
+        width: 100%;
+    }
+    .skill .webdev , .skill .programming{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .contactsec{
+        padding: 15px;
+    }
+    .contactsec .cont-container{
+        flex-direction: column;
+    }
+    .contactsec .cont-container .contactInfo{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .contactsec .cont-container .cnform{
+        width: 100%;
+    }
+
+
+}
